@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import '../repositories/livro_repository.dart';
 import '../utils/enums.dart';
 
-class AdicionarLivroControler with ChangeNotifier {
+class AdicionarLivroControler with ChangeNotifier { //declararando funçoes
   String _titulo = "";
   String _autor = "";
   String _edicao = "";
@@ -25,7 +25,7 @@ class AdicionarLivroControler with ChangeNotifier {
 
   bool get processando => _status == Status.working;
 
-  bool get isValid {
+  bool get isValid { //validando funçoes
     return validarTitulo(_titulo) == null &&
         validarAutor(_autor) == null &&
         validarEdicao(_edicao) == null &&
@@ -34,7 +34,7 @@ class AdicionarLivroControler with ChangeNotifier {
         validarUrl(_urlImagem) == null;
   }
 
-  String? validarTitulo(String? val) {
+  String? validarTitulo(String? val) {  //declarando a funçao 
     if (val == null || val.isEmpty) {
       return "O título não pode ser vazio";
     }

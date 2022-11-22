@@ -3,7 +3,7 @@ import 'package:validators/validators.dart';
 import '../services/autenticacao_servico.dart';
 import '../utils/enums.dart';
 
-class AutenticacaoController with ChangeNotifier {
+class AutenticacaoController with ChangeNotifier { //declarando 
   String _email = '';
   String _senha = '';
   String _confirmacaoSenha = '';
@@ -16,12 +16,12 @@ class AutenticacaoController with ChangeNotifier {
 
   AutenticacaoController(this._servicoAutenticacao);
 
-  bool get cadastrando => _cadastrar;
+  bool get cadastrando => _cadastrar; //validando
   bool get processando => _processando == Status.working;
   bool get hasError => _resultado == ActionResult.error;
   String get errorMsg => _errormsg ?? '';
 
-  String? validarEmail(String? val) {
+  String? validarEmail(String? val) { // corpo da funçao
     if (val == null || val.isEmpty) {
       return "E-mail não pode ser vazio";
     }
