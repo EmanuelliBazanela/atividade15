@@ -30,20 +30,22 @@ class _HomeState extends State<Home> {
 
   @override
   Widget build(BuildContext context) {
+    //exibição da tela home onde ficarao os livros cadastrados
     return Scaffold(
       appBar: AppBar(
-        title: 
-        Text("Lista de Livros"),
+        title: Text("Lista de Livros"),
         actions: [
           PopupMenuButton(
+            color: Colors.pink,
             onSelected: (value) {
-              mudarFiltroFavoritos();
+              mudarFiltroFavoritos(); // botao favorito ao pressionar muda de cor
             },
             itemBuilder: (ctx) {
               return [
                 PopupMenuItem(
                   value: 1,
                   child: Row(
+                    // acesso a pagina fr livros favoritos
                     children: [
                       if (_mostrarFavoritos)
                         Icon(

@@ -13,7 +13,7 @@ class CustomDrawer extends StatelessWidget {
     final _servicoAutenticacao =
         Provider.of<ServicoAutenticacao>(context, listen: false);
 
-    return Drawer(
+    return Drawer(  // barra de menu onde consegue acessar as paginas
       child: Column(
         children: [
           AppBar(

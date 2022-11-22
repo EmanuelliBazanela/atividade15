@@ -115,6 +115,8 @@ class _AutenticacaoState extends State<Autenticacao> {
                         children: [
                           ElevatedButton(
                             onPressed: () {
+                              color:
+                              Colors.pink;
                               executar();
                             },
                             child: Text(_controller.cadastrando
@@ -124,6 +126,8 @@ class _AutenticacaoState extends State<Autenticacao> {
                           TextButton(
                             onPressed: () {
                               _controller.alterarCadastrar();
+                              color:
+                              Colors.pink;
                             },
                             child: Text(_controller.cadastrando
                                 ? 'Logar'

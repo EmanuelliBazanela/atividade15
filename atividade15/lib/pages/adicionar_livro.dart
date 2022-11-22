@@ -14,7 +14,7 @@ class AdicionarLivro extends StatelessWidget {
         Provider.of<LivroRepository>(context, listen: false));
 
     return Scaffold(
-      appBar: AppBar(title: Text("Novo Livro")),
+      appBar: AppBar(title: Text("Novo Livro")),  // pedindo informações sobre o livro cadastrado
       body: Padding(
         padding: const EdgeInsets.all(10.0),
         child: Column(
@@ -69,7 +69,7 @@ class AdicionarLivro extends StatelessWidget {
             SizedBox(
               height: 10,
             ),
-            AnimatedBuilder(
+            AnimatedBuilder(                     //verificando e adicionando o botão cadastrar
               animation: _controller,
               builder: (context, child) => Stack(
                 children: [

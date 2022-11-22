@@ -25,7 +25,7 @@ class AdicionarLivroControler with ChangeNotifier { //declararando funçoes
 
   bool get processando => _status == Status.working;
 
-  bool get isValid { //validando funçoes
+  bool get isValid {                   //validando funçoes
     return validarTitulo(_titulo) == null &&
         validarAutor(_autor) == null &&
         validarEdicao(_edicao) == null &&

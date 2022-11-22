@@ -11,7 +11,7 @@ class DetalhesLivro extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final repositorio = Provider.of<LivroRepository>(context);
+    final repositorio = Provider.of<LivroRepository>(context);  //pag para exibir os detalhes do livro cadastrado
 
     final parameters =
         ModalRoute.of(context)?.settings.arguments as Map<String, dynamic>;
